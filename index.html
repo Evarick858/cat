@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="Evarick's personal profile - A dark cat-themed website featuring gaming, music, and creative exploration">
+    
+    <!-- Social Sharing Meta Tags -->
+    <meta property="og:title" content="Evarick - Personal Profile">
+    <meta property="og:description" content="The world often feels lonely, yet a single voice that truly listens is enough to endure">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evarick - Personal Profile">
+    <meta name="twitter:description" content="The world often feels lonely, yet a single voice that truly listens is enough to endure">
+    
+    <!-- iOS Web App Capable -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="assets/cat.svg" as="image">
+    <link rel="preload" href="script.js" as="script">
+    
+    <title>Evarick - Personal Profile</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-cat">🐱</div>
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Stars background decoration -->
+    <div class="stars-container" id="starsContainer"></div>
+    
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#social" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" role="banner">
+        <div class="hero-content">
+            <h1 class="hero-name">Evarick</h1>
+            <p class="hero-quote">The world often feels lonely, yet a single voice that truly listens is enough to endure</p>
+            <button type="button" class="cat-button" id="catImage" aria-label="Click the cat for a surprise animation">
+                <img src="assets/cat.svg?v=3" alt="Black cat illustration" class="cat-image-img">
+            </button>
+        </div>
+    </section>
+
+
+
+    <main>
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section animate-on-scroll fade-in">
+        <h2>What I Do</h2>
+        <div class="activities-list">
+            <div class="activity-item flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span class="activity-emoji" aria-hidden="true">🎮</span>
+                        <h3>Gaming</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 class="flip-card-title">Gaming</h3>
+                        <p>Di game kita mikir strategi, ngatur langkah, dan baca tutorial dulu.
+Di hidup nyata kita sering nekat jalan aja, padahal tutorialnya belum kebaca, map-nya belum kebuka, dan misi utamanya aja masih belum jelas.
+Lucunya, justru dari situ kita belajar—bukan cara menang cepat, tapi cara bertahan sambil pelan-pelan ngerti arah</p>
+                    </div>
+                </div>
+            </div>
+            <div class="activity-item flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span class="activity-emoji" aria-hidden="true">🎧</span>
+                        <h3>Music</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 class="flip-card-title">Music</h3>
+                        <p>Musik sering kita bilang cuma hiburan, padahal diam-diam jadi tempat paling jujur buat diri sendiri.
+Kita muter lagu buat santai, tapi yang ke-play malah lagu yang ngerti keadaan.
+Liriknya ketawa pelan, nadanya tenang, tapi isinya ngomongin hal-hal yang gak berani kita ucapin ke siapa pun</p>
+                    </div>
+                </div>
+            </div>
+            <div class="activity-item flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span class="activity-emoji" aria-hidden="true">💻</span>
+                        <h3>Tech</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 class="flip-card-title">Tech</h3>
+                        <p>Teknologi katanya bikin segalanya cepat.
+Nyatanya, dia lebih sering bikin kita diem bengong sambil mikir: salah di mana.
+Dari situ kita belajar, hidup itu bukan soal seberapa canggih alatnya, tapi seberapa tenang kita waktu semuanya gak jalan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section id="status" class="status-section animate-on-scroll slide-in-left">
+        <h2>Currently</h2>
+        <div class="status-content" role="status" aria-live="polite">
+            <p class="status-text">Currently exploring...</p>
+        </div>
+    </section>
+
+    <!-- Favorite Games Section -->
+    <section id="games" class="games-section animate-on-scroll slide-in-right">
+        <h2>Favorite Games</h2>
+        <div class="games-grid">
+            <div class="game-card" data-game="hollow-knight" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">🦋</span>
+                        <h3>Hollow Knight</h3>
+                        <p class="game-genre">Metroidvania</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">No cost too great!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-game="minecraft" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">⛏️</span>
+                        <h3>Minecraft</h3>
+                        <p class="game-genre">Sandbox</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">Herobrine!?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-game="hytale" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">🏰</span>
+                        <h3>Hytale</h3>
+                        <p class="game-genre">Adventure</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">Minecraft Killer?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-game="mlbb" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">⚔️</span>
+                        <h3>MLBB</h3>
+                        <p class="game-genre">MOBA</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">Maniac!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-game="sky" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">☁️</span>
+                        <h3>Sky</h3>
+                        <p class="game-genre">Adventure</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">Take My Hand</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-game="god-of-war" tabindex="0">
+                <div class="game-card-inner">
+                    <div class="game-card-front">
+                        <span class="game-icon">⚡</span>
+                        <h3>God of War</h3>
+                        <p class="game-genre">Action</p>
+                    </div>
+                    <div class="game-card-back">
+                        <p class="game-quote">Boy!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Floating Music Player (Bottom Right) -->
+    <button type="button" class="floating-music-btn" id="musicToggle" aria-label="Play or pause background music" title="Background Music">
+        <span class="music-icon-play">🎵</span>
+        <span class="music-icon-pause" style="display: none;">⏸️</span>
+        <div class="sound-waves">
+            <span class="wave wave-1"></span>
+            <span class="wave wave-2"></span>
+            <span class="wave wave-3"></span>
+        </div>
+    </button>
+    
+    <!-- Hidden audio element -->
+    <audio id="bgMusic" loop>
+        <source src="assets/song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Minimal Footer with Social Links -->
+    <footer id="social" class="footer-section" role="contentinfo">
+        <div class="footer-content">
+            <div class="social-links-minimal">
+                <a href="https://x.com/ElAwdean" target="_blank" rel="noopener noreferrer" class="social-link-minimal" aria-label="Twitter" title="Twitter">
+                    <span class="social-icon-minimal">🐦</span>
+                </a>
+                <a href="https://www.instagram.com/evarick1.1?igsh=Nm9rbnpnb2FweDM" target="_blank" rel="noopener noreferrer" class="social-link-minimal" aria-label="Instagram" title="Instagram">
+                    <span class="social-icon-minimal">📷</span>
+                </a>
+                <a href="https://youtube.com/channel/UCKL8nAmqlVJvvPK_LPZJt0g?si=NjX3kUYdzkgEbiKu" target="_blank" rel="noopener noreferrer" class="social-link-minimal" aria-label="YouTube" title="YouTube">
+                    <span class="social-icon-minimal">▶️</span>
+                </a>
+                <a href="https://discord.gg/D2GdPP7QWr" target="_blank" rel="noopener noreferrer" class="social-link-minimal" aria-label="Discord" title="Discord">
+                    <span class="social-icon-minimal">💬</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
